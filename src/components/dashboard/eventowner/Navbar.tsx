@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
+import { Menu } from "lucide-react";
 import { NavigationItem } from "./types";
 import UserMenu from "./UserMenu";
 import MobileMenu from "./MobileMenu";
+import NotificationDialog from "./NotificationDialog";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
     { name: "Dashboard", href: "/dashboard", icon: "fas fa-home" },
@@ -20,14 +21,9 @@ const Navbar = () => {
     { name: "About", href: "/about", icon: "fas fa-address-card" },
   ];
 
-  const handleUserMenuToggle = (): void => {
-    setIsUserMenuOpen(!isUserMenuOpen);
-    setIsMobileMenuOpen(false);
-  };
-
   const handleMobileMenuToggle = (): void => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsUserMenuOpen(false);
+    setMenuOpen(false);
   };
 
   return (
@@ -58,23 +54,19 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* User Actions */}
           <div className="flex items-center space-x-4">
             {/* Notifications */}
             <div className="relative">
-              <button
-                className="text-gray-600 hover:text-primary p-2 rounded-full transition duration-300"
-                aria-label="Notifications"
-              >
-                <i className="fas fa-bell text-lg"></i>
-                <span className="absolute top-0 right-0 bg-secondary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  3
-                </span>
-              </button>
+              <div className="flex items-center space-x-4">
+                <NotificationDialog />
+              </div>
             </div>
 
             {/* User Menu */}
-            <UserMenu isOpen={isUserMenuOpen} onToggle={handleUserMenuToggle} />
+            <UserMenu
+              isOpen={menuOpen}
+              onToggle={() => setMenuOpen(!menuOpen)}
+            />
 
             {/* Mobile menu button */}
             <button
@@ -84,7 +76,7 @@ const Navbar = () => {
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
-              <i className="fas fa-bars"></i>
+              <Menu />
             </button>
           </div>
         </div>
