@@ -57,12 +57,14 @@ const ServiceProvidersPage: React.FC = () => {
   });
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-gray-50 ">
       <FilterSidebar filters={filters} onFilterChange={setFilters} onClearAll={handleClearAll} />
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto ">
         <ResultsHeader count={filteredProviders.length} sortBy={sortBy} onSortChange={setSortBy} />
-        <div className="px-8 py-6 space-y-4">
+        <div className="grid grid-cols-2">
+        <div className="px-8 py-6 space-y-4 ">
           {filteredProviders.map(provider => <ProviderCard key={provider.id} provider={provider} />)}
+        </div>
         </div>
       </div>
     </div>

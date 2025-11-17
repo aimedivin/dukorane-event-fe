@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
-import {Provider} from "./types"
+import { Provider } from "./types";
 
 import { Badge } from "./Badge";
 import { RatingStars } from "./RatingStar";
@@ -14,14 +14,13 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow ">
       <div className="flex gap-4">
         <img
           src={provider.image}
           alt={provider.name}
           className="w-16 h-16 rounded-full object-cover flex-shrink-0"
         />
-
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between">
             <div className="flex-1">
@@ -33,7 +32,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
                 {provider.verified && <Badge variant="verified" />}
                 {provider.premium && <Badge variant="premium" />}
                 <span className="text-sm text-gray-500">
-                  • {provider.location}
+                  {provider.location}
                 </span>
               </div>
             </div>
