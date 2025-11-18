@@ -21,14 +21,6 @@ const CTABanner = () => {
               <Rocket className="h-5 w-5" />
               Get Started Now
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10"
-            >
-              <Play className="h-5 w-5" />
-              Watch Demo
-            </Button>
           </div>
         </div>
       </div>
