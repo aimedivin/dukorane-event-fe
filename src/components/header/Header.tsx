@@ -16,33 +16,22 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6">
           <a
             href="#home"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
           >
-            Home
+            Overview
+          </a>
+
+          <a
+            href="#how-it-works"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            Browser Services
           </a>
           <a
             href="#how-it-works"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors"
           >
-            How It Works
-          </a>
-          <a
-            href="#services"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Services
-          </a>
-          <a
-            href="#about"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="#contact"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Contact
+            Events
           </a>
         </nav>
 

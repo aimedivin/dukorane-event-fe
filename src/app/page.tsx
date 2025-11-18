@@ -16,14 +16,11 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Why Choose Dukorane Events Section */}
-      <WhyChooseUs />
+      {/* Popular Service Categories Section */}
+      <Services />
 
       {/* How It Works Section */}
       <HowItWorks />
-
-      {/* Popular Service Categories Section */}
-      <Services />
 
       {/* What Our Users Say Section */}
       <Testimonials />
