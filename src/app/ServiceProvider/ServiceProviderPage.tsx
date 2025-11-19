@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { FilterSidebar } from "../../components/dashboard/eventowner/FiltersSidebar";
-import { ResultsHeader } from "../../components/dashboard/eventowner/ResultsHeader";
-import { ProviderCard } from "../../components/dashboard/eventowner/ProviderCard";
+import { FilterSidebar } from "../../components/dashboard/eventowner/servicepage/FiltersSidebar";
+import { ResultsHeader } from "../../components/dashboard/eventowner/servicepage/ResultsHeader";
+import { ProviderCard } from "../../components/dashboard/eventowner/servicepage/ProviderCard";
 import {
   FilterState,
   Provider,

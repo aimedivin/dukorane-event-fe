@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MobileMenuProps } from "./types/types";
+import { MobileMenuProps } from "../types/types";
 
 const MobileMenu = ({ isOpen, navigation }: MobileMenuProps) => {
   if (!isOpen) return null;

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { UserMenuProps, UserMenuItem } from "./types/types";
+import { UserMenuProps, UserMenuItem } from "../types/types";
 import { useUser } from "@/hooks/useUser";
 
 const UserMenu = ({ isOpen, onToggle }: UserMenuProps) => {
@@ -23,7 +23,7 @@ const UserMenu = ({ isOpen, onToggle }: UserMenuProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onToggle]);
 
-  if (!user) return null; // Only show menu if user is logged in
+  if (!user) return null;
 
   // Menu items for logged-in user
   const menuItems: UserMenuItem[] = [

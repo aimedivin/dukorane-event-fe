@@ -1,14 +1,16 @@
 "use client";
 
-import HeroEventOwner from "@/components/dashboard/eventowner/HeroEventOwner";
-import { FilterSidebar } from "../../components/dashboard/eventowner/FiltersSidebar";
-import { ResultsHeader } from "../../components/dashboard/eventowner/ResultsHeader";
-import { ProviderCard } from "../../components/dashboard/eventowner/ProviderCard";
+import HeroEventOwner from "@/components/dashboard/eventowner/servicepage/HeroEventOwner";
+import { FilterSidebar } from "../../components/dashboard/eventowner/servicepage/FiltersSidebar";
+import { ResultsHeader } from "../../components/dashboard/eventowner/servicepage/ResultsHeader";
+import { ProviderCard } from "../../components/dashboard/eventowner/servicepage/ProviderCard";
+
 import {
   FilterState,
   Provider,
 } from "../../components/dashboard/eventowner/types/types";
 import { useState } from "react";
+import DashboardUser from "@/components/dashboard/eventowner/dashboardpage/DashboardUser";
 
 export default function OwnerPage() {
   const [filters, setFilters] = useState<FilterState>({
@@ -83,18 +85,16 @@ export default function OwnerPage() {
     <div>
       <main>
         {/* Hero section */}
-        <HeroEventOwner />
+       <DashboardUser />
+        {/* <HeroEventOwner />
 
-        {/* Dashboard content */}
         <div className="flex h-screen bg-gray-50">
-          {/* Filters sidebar */}
           <FilterSidebar
             filters={filters}
             onFilterChange={setFilters}
             onClearAll={handleClearAll}
           />
 
-          {/* Results section */}
           <div className="flex-1 overflow-y-auto">
             <ResultsHeader
               count={filteredProviders.length}
@@ -114,7 +114,7 @@ export default function OwnerPage() {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
   );
