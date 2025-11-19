@@ -7,7 +7,7 @@ import { ProviderCard } from "../../components/dashboard/eventowner/ProviderCard
 import {
   FilterState,
   Provider,
-} from "../../components/dashboard/eventowner/types";
+} from "../../components/dashboard/eventowner/types/types";
 import { useState } from "react";
 
 export default function OwnerPage() {

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { UserMenuProps, UserMenuItem } from "./types";
+import { UserMenuProps, UserMenuItem } from "./types/types";
 import { useUser } from "@/hooks/useUser";
 
 const UserMenu = ({ isOpen, onToggle }: UserMenuProps) => {

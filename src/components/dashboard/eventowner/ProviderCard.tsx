@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
-import { Provider } from "./types";
+import { Provider } from "./types/types";
 
 import { Badge } from "./Badge";
 import { RatingStars } from "./RatingStar";

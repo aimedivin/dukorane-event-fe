@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { NavigationItem } from "./types";
+import { NavigationItem } from "./types/types";
 import UserMenu from "./UserMenu";
 import MobileMenu from "./MobileMenu";
 import NotificationDialog from "./NotificationDialog";
@@ -13,12 +13,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
-    { name: "Dashboard", href: "/dashboard", icon: "fas fa-home" },
-    { name: "My Events", href: "/events", icon: "fas fa-calendar-alt" },
-    { name: "Browse Services", href: "/services", icon: "fas fa-search" },
-    { name: "Service Providers", href: "/providers", icon: "fas fa-users" },
-    { name: "How It Works", href: "/how-it-works", icon: "fas fa-info-circle" },
-    { name: "About", href: "/about", icon: "fas fa-address-card" },
+    { name: "Dashboard", href: "/" },
+    { name: "My Events", href: "/events" },
+    { name: "Browse Services", href: "/services" },
+    { name: "Service Providers", href: "/providers" },
+    { name: "How It Works", href: "/how-it-works" },
+    { name: "About", href: "/about" },
   ];
 
   const handleMobileMenuToggle = (): void => {
@@ -30,11 +30,10 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/dashboard" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <i className="fas fa-glass-cheers text-secondary text-2xl mr-2"></i>
-              <span className="text-primary font-bold text-xl">
+              <span className="text-radiant-r from-primary to-secondary font-bold text-xl">
                 Dukorane Events
               </span>
             </Link>
