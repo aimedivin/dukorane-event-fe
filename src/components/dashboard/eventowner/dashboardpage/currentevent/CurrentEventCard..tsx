@@ -1,5 +1,6 @@
 import { EventItem } from "./types";
 import { FaUsers, FaMapMarkerAlt } from "react-icons/fa";
+import { RiPercentLine } from "react-icons/ri";
 
 interface Props {
   item: EventItem;
@@ -45,12 +46,12 @@ const CurrentEventCard = ({ item }: Props) => {
           <p className="text-sm text-gray-500">{item.date}</p>
         </div>
 
-        <span className={`text-xs px-3 py-1 rounded-full ${statusColor}`}>
+        <span className={`text-xs px-2 py-1 rounded-full ${statusColor}`}>
           {progressStatus}
         </span>
       </div>
 
-      <div className="flex gap-4 text-sm text-gray-600 mt-3">
+      <div className="flex gap-4 text-sm text-gray-600 mt-1">
         <span className="flex items-center gap-1">
           <FaUsers /> {item.guests} guests
         </span>
@@ -60,7 +61,7 @@ const CurrentEventCard = ({ item }: Props) => {
         </span>
       </div>
 
-      <div className="mt-3">
+      <div className="mt-2">
         <p className="text-xs text-gray-500">Progress</p>
 
         <div className="w-full bg-gray-200 h-2 rounded-full mt-1">
@@ -70,7 +71,12 @@ const CurrentEventCard = ({ item }: Props) => {
           ></div>
         </div>
 
-        <p className="text-xs text-right mt-1">{item.progress}%</p>
+        <div className="text-sm text-right mt-1 flex justify-end items-center gap-1">
+          <span className="font-semibold">{item.progress}</span>
+          <span>
+            <RiPercentLine />
+          </span>
+        </div>
       </div>
     </div>
   );

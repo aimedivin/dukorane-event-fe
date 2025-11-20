@@ -14,9 +14,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
-    { name: "Dashboard", href: "/owner" },
+    { name: "Dashboard", href: "/eventowner" },
     { name: "My Events", href: "/events" },
-    { name: "Browse Services", href: "/servicepage/services" },
     { name: "Service Providers", href: "/providers" },
     { name: "How It Works", href: "/how-it-works" },
     { name: "About", href: "/about" },
@@ -35,7 +34,9 @@ const Navbar = () => {
             <Link href="/owner" className="flex items-center">
               <div className=" font-bold text-xl flex gap-2">
                 <FaCalendarAlt className="size-8 text-white bg-primary p-2 rounded-md" />
-                <p className="text-center txt-primary-gradient">Dukorane Events</p>
+                <p className="text-center txt-primary-gradient">
+                  Dukorane Events
+                </p>
               </div>
             </Link>
           </div>
