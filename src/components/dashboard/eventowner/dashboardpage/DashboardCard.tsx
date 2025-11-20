@@ -9,7 +9,7 @@ interface DashboardCardProps {
 
 export const DashboardCard = ({ icon, label, value, bgColor }: DashboardCardProps) => {
   return (
-    <div className="flex items-center p-4 bg-white rounded-lg shadow-md space-x-4">
+    <div className="flex items-center p-4 bg-white border border-gray-300 rounded-lg shadow-md space-x-4">
       <div className={`p-3 rounded-full ${bgColor || "bg-gray-200"} text-white`}>
         {icon}
       </div>

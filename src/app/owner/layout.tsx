@@ -9,7 +9,7 @@ export default function OwnerLayout({
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       <Navbar />
-      <main className="flex-1 p-6">{children}</main>
+      <main>{children}</main>
     </div>
   );
 }

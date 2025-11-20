@@ -6,7 +6,7 @@ interface DashboardData {
   activeEvents: number;
   bookedProviders: number;
   pendingTasks: number;
-  budgetUsed: number; // percentage
+  budgetUsed: number; 
 }
 
 interface DashboardContextProps {

@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link href="/owner" className="flex items-center">
               <div className=" font-bold text-xl flex gap-2">
                 <FaCalendarAlt className="size-8 text-white bg-primary p-2 rounded-md" />
-                <p className="text-center text-black">Dukorane Events</p>
+                <p className="text-center txt-primary-gradient">Dukorane Events</p>
               </div>
             </Link>
           </div>
