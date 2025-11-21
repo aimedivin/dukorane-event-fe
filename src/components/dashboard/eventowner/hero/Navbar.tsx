@@ -4,9 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { NavigationItem } from "../types/types";
-import UserMenu from "../servicepage/UserMenu";
-import MobileMenu from "../servicepage/MobileMenu";
-import NotificationDialog from "../servicepage/NotificationDialog";
+import UserMenu from "../servicebrowser/UserMenu";
+import MobileMenu from "../servicebrowser/MobileMenu";
+import NotificationDialog from "../notification/NotificationDialog";
 import { FaCalendarAlt } from "react-icons/fa";
 
 const Navbar = () => {
@@ -14,10 +14,10 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
-    { name: "Dashboard", href: "/eventowner" },
-    { name: "My Events", href: "/events" },
-    { name: "Service Providers", href: "/providers" },
-    { name: "How It Works", href: "/how-it-works" },
+    { name: "Dashboard", href: "/dashboard/eventowner" },
+    { name: "My Events", href: "/dashboard" },
+    { name: "Service Providers", href: "/dashboard" },
+    { name: "How It Works", href: "/dashboard" },
     { name: "About", href: "/about" },
   ];
 

@@ -1,10 +1,10 @@
 "use client";
 
-import CurrentEvents from "@/components/dashboard/eventowner/dashboardpage/currentevent/CurrentEvent";
-import DashboardUser from "@/components/dashboard/eventowner/dashboardpage/DashboardUser";
-import QuickActions from "@/components/dashboard/eventowner/dashboardpage/quickAction/QuickAction";
-import RecentMessages from "@/components/dashboard/eventowner/dashboardpage/recentmessage/RecentMessage";
-import UpcomingTasks from "@/components/dashboard/eventowner/dashboardpage/UpcomingTask/UpcomingTasks";
+import CurrentEvents from "@/components/dashboard/eventowner/currentevent/CurrentEvent";
+import DashboardUser from "@/components/dashboard/eventowner/hero/DashboardUser";
+import QuickActions from "@/components/dashboard/eventowner/quickAction/QuickAction";
+import RecentMessages from "@/components/dashboard/eventowner/recentmessage/RecentMessage";
+import UpcomingTasks from "@/components/dashboard/eventowner/UpcomingTask/UpcomingTasks";
 import Footer from "@/components/home/Footer";
 
 export default function OwnerPage() {

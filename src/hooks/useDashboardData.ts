@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from "react";
-import { EventItem } from "@/components/dashboard/eventowner/dashboardpage/currentevent/types";
+import { EventItem } from "@/components/dashboard/eventowner/currentevent/types";
 
 export const useDashboardData = () => {
   const [events, setEvents] = useState<EventItem[]>([]);

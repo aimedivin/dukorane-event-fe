@@ -70,7 +70,7 @@ const Testimonials = () => {
                 JM
               </div>
               <div>
-                <p className="font-semibold">Jean UX Pilot Mugabo</p>
+                <p className="font-semibold">Boncoeur Ishimwe</p>
                 <p className="text-sm text-muted-foreground">
                   Service Provider
                 </p>

@@ -5,8 +5,13 @@ import { FaPlus } from "react-icons/fa";
 import { DashboardCard } from "./DashboardCard";
 import { FaCalendarAlt, FaClock, FaDollarSign } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
+import CreateEventForm from "../createEvent/CreateEventForm";
+
+import { useState } from "react";
+import CreateEventButton from "../createEvent/CreateButton";
 const DashboardUser = () => {
   const { user } = useUser();
+  const [showForm, setShowForm] = useState(false);
 
   const data = {
     activeEvents: 3,
@@ -26,10 +31,7 @@ const DashboardUser = () => {
         </div>
         <div>
           <div className="flex items-center align-middle">
-            <button className="flex gap-1 text-1xl  items-center bg-primary-gradient text-white rounded-md p-2 mr-10 hover:opacity-90 ">
-              <FaPlus />
-              <span className="capitalize ">create new event</span>
-            </button>
+            <CreateEventButton />
           </div>
         </div>
       </div>
