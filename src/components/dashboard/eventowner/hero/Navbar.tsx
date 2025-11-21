@@ -3,22 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { NavigationItem } from "./types";
-import UserMenu from "./UserMenu";
-import MobileMenu from "./MobileMenu";
-import NotificationDialog from "./NotificationDialog";
+import { NavigationItem } from "../types/types";
+import UserMenu from "../servicebrowser/UserMenu";
+import MobileMenu from "../servicebrowser/MobileMenu";
+import NotificationDialog from "../notification/NotificationDialog";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
-    { name: "Dashboard", href: "/dashboard", icon: "fas fa-home" },
-    { name: "My Events", href: "/events", icon: "fas fa-calendar-alt" },
-    { name: "Browse Services", href: "/services", icon: "fas fa-search" },
-    { name: "Service Providers", href: "/providers", icon: "fas fa-users" },
-    { name: "How It Works", href: "/how-it-works", icon: "fas fa-info-circle" },
-    { name: "About", href: "/about", icon: "fas fa-address-card" },
+    { name: "Dashboard", href: "/dashboard/eventowner" },
+    { name: "My Events", href: "/dashboard" },
+    { name: "Service Providers", href: "/dashboard" },
+    { name: "How It Works", href: "/dashboard" },
+    { name: "About", href: "/about" },
   ];
 
   const handleMobileMenuToggle = (): void => {
@@ -30,13 +30,14 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/dashboard" className="flex items-center">
-              <i className="fas fa-glass-cheers text-secondary text-2xl mr-2"></i>
-              <span className="text-primary font-bold text-xl">
-                Dukorane Events
-              </span>
+            <Link href="/owner" className="flex items-center">
+              <div className=" font-bold text-xl flex gap-2">
+                <FaCalendarAlt className="size-8 text-white bg-primary p-2 rounded-md" />
+                <p className="text-center txt-primary-gradient">
+                  Dukorane Events
+                </p>
+              </div>
             </Link>
           </div>
 
@@ -48,7 +49,6 @@ const Navbar = () => {
                 href={item.href}
                 className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 flex items-center"
               >
-                <i className={`${item.icon} mr-1`}></i>
                 {item.name}
               </Link>
             ))}
